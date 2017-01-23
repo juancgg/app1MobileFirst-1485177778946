@@ -1,25 +1,14 @@
 {
-    "Params": {
-        "DevMode": {
-            "Instrumentation": {
-                "command": "",
-                "env": {
-                    "BLUEMIX_APP_MGMT_ENABLE": "devconsole+shell+inspector",
-                    "NODE_ENV": "development"
-                },
-                "memory": "384M"
-            },
-            "Packager": "com.ibm.perfectstorm.cloudoe.packager.LiveEditDeploymentPackager"
-        },
-        "Name": "app1MobileFirst",
-        "Target": {
-            "Org": "jgonzalg@es.ibm.com",
-            "Space": "testing_IBM MobileFirst Services Starter",
-            "Url": "https://api.ng.bluemix.net"
-        },
-        "Timeout": 60
+  "ServiceId": "com.ibm.cloudoe.orion.client.deploy",
+  "Params": {
+    "Target": {
+      "Url": "https://api.ng.bluemix.net",
+      "Org": "jgonzalg@es.ibm.com",
+      "Space": "testing_IBM MobileFirst Services Starter"
     },
-    "Path": "",
-    "ServiceId": "com.ibm.cloudoe.orion.client.deploy",
-    "Type": "Cloud Foundry"
+    "Name": "app1MobileFirst",
+    "Instrumentation": {}
+  },
+  "Path": "",
+  "Type": "Cloud Foundry"
 }
