@@ -1,12 +1,32 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>HelloTodo</title>
     <link rel="stylesheet" href="main.css">
     <link rel="manifest" href="manifest.json">
+    <script src="BMSPushSDK.js"></script>
+    <script src="BMSPushServiceWorker.js" async></script>
 </head>
 
 <body>
+
+<script> 
+	var bmsPush = new BMSPush();
+	function callback(response) {
+		 alert(response.response)
+	}
+	
+	var initParams = {
+	  "appGUID":"48fef0dd-69ce-455d-9765-e2a943a639fe",
+	  "appRegion":"ng.bluemix.net",
+	   "clientSecret":"0be9105c-a830-4786-84ca-93b32b712c6f"
+	}
+	
+	bmsPush.initialize(initParams, callback);
+	bmsPush.register(function(response) {   alert(response.response)  })
+</script>
+
 <div class="wrapper">
     <div class="float-right" style="align:center">
         <a class="mf-btn mf-btn--primary" href="/explorer/#!/Item" target="_blank">View API Reference</a>
